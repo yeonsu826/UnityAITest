@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c5f14ee4611a5f47a439e4f14e81698, type: 3}
+  m_Name: NPCData_1
+  m_EditorClassIdentifier: Assembly-CSharp::NPCData
+  npcName: Npc_A
+  exhibitTitle: "\uBCC4\uC774 \uBE5B\uB098\uB294 \uBC24"
+  description: "\uBE48\uC13C\uD2B8 \uBC18 \uACE0\uD750\uC758 \uBCC4\uC774 \uBE5B\uB098\uB294
+    \uBC24. \nUnity AI \uB97C \uC0AC\uC6A9\uD574\uC11C \uB9CC\uB4E0 \uC791\uD488\uC785\uB2C8\uB2E4."
+  artistName: "\uBE48\uC13C\uD2B8 \uBC18 \uACE0\uD750"
+  yearCreated: 2025.11.20
+  exhibitImage: {fileID: 21300000, guid: f410c19db2c57464782d649048115870, type: 3}
+  fontSize: 16
+  backgroundColor: {r: 1, g: 1, b: 1, a: 1}

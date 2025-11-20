@@ -1,0 +1,20 @@
+{
+    "asset": "f1550e7e3089f1546a70506cbd50edb3",
+    "fileName": "019a9f13-de9c-7acd-9e1d-a3cc71e437b0.png",
+    "prompt": "Modern cityscape reimagined in Vincent van Gogh style, tall buildings and skyscrapers with swirling brushstrokes, busy streets with cars, neon lights interpreted with vibrant colors, starry night sky above urban landscape, thick impasto texture, post-impressionism meets contemporary city, expressive and emotional, dramatic color palette of blues, yellows, and oranges, oil painting style",
+    "negativePrompt": "",
+    "model": "0409c144-da57-44a7-b531-72bc9a32fa4f",
+    "modelName": "GPT Image 1 - High",
+    "customSeed": -1,
+    "w3CTraceId": "5d9d77429bed7f10c57f4a723b01f841",
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": []
+    },
+    "upscaleFactor": 0
+}

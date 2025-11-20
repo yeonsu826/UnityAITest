@@ -1,0 +1,20 @@
+{
+    "asset": "f1550e7e3089f1546a70506cbd50edb3",
+    "fileName": "019a9f17-dd92-7a0a-add9-5fdac3392a6f.png",
+    "prompt": "Night city scene in Vincent van Gogh style, swirling starry sky with circular brushstrokes, bustling urban street with old buildings, glowing yellow street lamps, warm amber cafe lights, people walking on cobblestone streets, church spire in background, deep blue and purple night sky with bright stars, thick impasto texture with visible brushstrokes, post-impressionist technique, dramatic contrast between warm yellows and cool blues, highly expressive and emotional, masterpiece quality oil painting",
+    "negativePrompt": "",
+    "model": "0409c144-da57-44a7-b531-72bc9a32fa4f",
+    "modelName": "GPT Image 1 - High",
+    "customSeed": -1,
+    "w3CTraceId": "f99ad1c8662aca4f7d9d91ae644a578e",
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": []
+    },
+    "upscaleFactor": 0
+}

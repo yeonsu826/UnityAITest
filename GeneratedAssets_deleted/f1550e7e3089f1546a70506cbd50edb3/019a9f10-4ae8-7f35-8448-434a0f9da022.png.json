@@ -1,0 +1,20 @@
+{
+    "asset": "f1550e7e3089f1546a70506cbd50edb3",
+    "fileName": "019a9f10-4ae8-7f35-8448-434a0f9da022.png",
+    "prompt": "Night landscape painting in Vincent van Gogh style, swirling turbulent sky with circular brushstrokes, bright yellow crescent moon and twinkling stars with halos of light, deep cobalt blue and ultramarine sky, dynamic flowing clouds in spirals, dark cypress trees in foreground, peaceful village with warm amber lights in windows, rolling green hills, thick impasto texture with visible brushstrokes, post-impressionist technique, highly expressive and emotional, masterpiece quality oil painting, dramatic contrast between cool blues and warm yellows",
+    "negativePrompt": "",
+    "model": "0409c144-da57-44a7-b531-72bc9a32fa4f",
+    "modelName": "GPT Image 1 - High",
+    "customSeed": -1,
+    "w3CTraceId": "c814655dcbd5dd0ccfa324726e6f00c2",
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": []
+    },
+    "upscaleFactor": 0
+}

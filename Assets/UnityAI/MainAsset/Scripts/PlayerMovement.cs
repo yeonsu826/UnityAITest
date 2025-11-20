@@ -161,17 +161,7 @@ public class PlayerMovement : MonoBehaviour
     /// </summary>
     void OnControllerColliderHit(ControllerColliderHit hit)
     {
-        // DestructibleObject 확인
-        DestructibleObject destructible = hit.collider.GetComponent<DestructibleObject>();
-        if (destructible != null)
-        {
-            // 충돌 속도 계산 (이동 속도 크기)
-            float impactSpeed = velocity.magnitude + (new Vector3(hit.moveDirection.x, 0, hit.moveDirection.z).magnitude * moveSpeed);
-            
-            // 파괴 가능한 물체에 충돌 알림
-            destructible.OnPlayerHit(hit.point, impactSpeed);
-        }
-
+        
         Rigidbody body = hit.collider.attachedRigidbody;
 
         // Rigidbody가 없거나 kinematic이면 무시

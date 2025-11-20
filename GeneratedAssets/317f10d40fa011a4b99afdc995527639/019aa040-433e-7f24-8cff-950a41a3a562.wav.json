@@ -1,0 +1,13 @@
+{
+    "asset": "317f10d40fa011a4b99afdc995527639",
+    "fileName": "019aa040-433e-7f24-8cff-950a41a3a562.wav",
+    "prompt": "Interior wooden door opening smoothly, gentle creak, door handle click, light footstep, natural room ambience, clean sound effect",
+    "negativePrompt": "voice, speech, music, melody, singing, footsteps, wind, rain, traffic, car, engine, electronic, digital, synthesizer, bass, drums, guitar, piano, crowd, people talking, breathing, animal sounds, water, fire, explosion, glass, metal clanging, bells, alarms,low quality, muffled, distorted, compressed, clipping, static, white noise, hiss, buzz, hum, underwater sound, telephone quality, radio static, echo chamber, excessive reverb",
+    "model": "ee31b223-3fe1-4ae6-bf54-d8a80bb4b0e1",
+    "modelName": "Text to Sound",
+    "customSeed": -1,
+    "w3CTraceId": "89493eb71a3eb0df9428015162dd9aae",
+    "duration": 1.5,
+    "autoTrim": true,
+    "hasReference": false
+}

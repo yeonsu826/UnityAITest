@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityAI.Interaction; // 새로운 인터페이스 시스템
 
 /// <summary>
 /// NPC 설명 UI를 관리하는 매니저 스크립트
@@ -29,7 +30,7 @@ public class NPCUIManager : MonoBehaviour
     [SerializeField] private bool showDebugLogs = true;
     
     private CanvasGroup canvasGroup;
-    private NPCInteraction currentNPC;
+    private NPCInteractable currentNPC; // 새로운 시스템으로 변경
     
     private void Awake()
     {
@@ -108,6 +109,17 @@ public class NPCUIManager : MonoBehaviour
             StopAllCoroutines();
             StartCoroutine(FadeIn());
         }
+    }
+    
+    /// <summary>
+    /// NPC 설명 UI 표시 (NPCInteractable 참조와 함께)
+    /// </summary>
+    /// <param name="npcData">표시할 NPC 데이터</param>
+    /// <param name="npcInteractable">호출한 NPCInteractable 컴포넌트</param>
+    public void ShowNPCDescription(NPCData npcData, NPCInteractable npcInteractable)
+    {
+        currentNPC = npcInteractable;
+        ShowNPCDescription(npcData);
     }
     
     /// <summary>

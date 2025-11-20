@@ -1,0 +1,13 @@
+{
+    "asset": "317f10d40fa011a4b99afdc995527639",
+    "fileName": "019aa03e-f4bb-7a8c-9e92-1b7bbf84de1b.wav",
+    "prompt": "낡은 나무 문이 천천히 열리는 소리, 삐걱거리는 녹슨 경첩, 나무가 삐걱대는 소리, 현실적인 폴리 효과음",
+    "negativePrompt": "",
+    "model": "ee31b223-3fe1-4ae6-bf54-d8a80bb4b0e1",
+    "modelName": "Text to Sound",
+    "customSeed": -1,
+    "w3CTraceId": "aa744a121053b06efc797f86df6bae56",
+    "duration": 1.5,
+    "autoTrim": true,
+    "hasReference": false
+}

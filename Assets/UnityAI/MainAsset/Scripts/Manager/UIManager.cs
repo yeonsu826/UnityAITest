@@ -48,7 +48,6 @@ public class UIManager : MonoBehaviour
     [SerializeField] private bool animateAcquisition = true;
     
     private float acquisitionTimer = 0f;
-    private float originalAcquisitionScale = 1f;
     private bool hasKey = false;
     
     #endregion
@@ -147,7 +146,6 @@ public class UIManager : MonoBehaviour
         // 획득 메시지 텍스트 초기화
         if (acquisitionText != null)
         {
-            originalAcquisitionScale = acquisitionText.transform.localScale.x;
             acquisitionText.gameObject.SetActive(false);
         }
         
@@ -244,7 +242,6 @@ public class UIManager : MonoBehaviour
         acquisitionTimer = acquisitionDisplayTime;
         
         // 초기 스케일 복원
-        acquisitionText.transform.localScale = Vector3.one * originalAcquisitionScale;
         
         if (showDebugLogs)
             Debug.Log($"[UIManager] 획득 메시지 표시: {acquisitionMessage}");
@@ -258,7 +255,6 @@ public class UIManager : MonoBehaviour
         if (acquisitionText != null)
         {
             acquisitionText.gameObject.SetActive(false);
-            acquisitionText.transform.localScale = Vector3.one * originalAcquisitionScale;
         }
     }
     
@@ -276,7 +272,6 @@ public class UIManager : MonoBehaviour
             {
                 // 크기 펄스 효과
                 float scale = 1f + Mathf.Sin(acquisitionTimer * 10f) * 0.15f;
-                acquisitionText.transform.localScale = Vector3.one * scale * originalAcquisitionScale;
                 
                 // 페이드 아웃 효과
                 float alpha = Mathf.Clamp01(acquisitionTimer / acquisitionDisplayTime);

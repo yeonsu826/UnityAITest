@@ -7,7 +7,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     [Header("이동 설정")]
-    [SerializeField] private float moveSpeed = 5f; // 플레이어 이동 속도
+    [SerializeField] private float moveSpeed = 1f; // 플레이어 이동 속도
     [SerializeField] private float gravity = -9.81f; // 중력 값
     [SerializeField] private float groundCheckDistance = 0.2f; // 바닥 체크 거리
     [SerializeField] private float rotationSpeed = 10f; // 플레이어 회전 속도
@@ -21,6 +21,9 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("물리 충돌 설정")]
     [SerializeField] private float pushPower = 2f; // 물체를 밀어내는 힘
+
+    [Header("애니메이션 설정")]
+    [SerializeField] private Animator animator; // 애니메이터 컴포넌트 참조
 
     /// <summary>
     /// CharacterController 컴포넌트 참조
@@ -43,6 +46,16 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         controller = GetComponent<CharacterController>();
+
+        // 애니메이터가 설정되지 않았으면 자동 할당
+        if (animator == null)
+        {
+            animator = GetComponent<Animator>();
+            if (animator == null)
+            {
+                Debug.LogWarning("PlayerMovement: Animator 컴포넌트를 찾을 수 없습니다!");
+            }
+        }
 
         // 카메라가 설정되지 않았으면 메인 카메라 자동 할당
         if (cameraTransform == null)
@@ -106,6 +119,9 @@ public class PlayerMovement : MonoBehaviour
         // 이동 방향 계산 (카메라 기준)
         Vector3 move = cameraRight * horizontal + cameraForward * vertical;
 
+        // 애니메이션을 위한 speed 값 계산
+        float currentSpeed = 0f;
+
         // CharacterController로 이동
         if (move.magnitude > 0.1f)
         {
@@ -114,6 +130,23 @@ public class PlayerMovement : MonoBehaviour
             // 플레이어를 이동 방향으로 부드럽게 회전
             Quaternion targetRotation = Quaternion.LookRotation(move);
             transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
+
+            // 이동 중이면 speed를 1로 설정
+            currentSpeed = 1f;
+        }
+
+        // 애니메이션: Speed 파라미터 설정 (소문자 speed와 대문자 Speed 둘 다 시도)
+        if (animator != null)
+        {
+            animator.SetFloat("Speed", currentSpeed); // 대문자 버전
+            animator.SetFloat("speed", currentSpeed); // 소문자 버전
+            
+            // 디버깅용 - 콘솔에 speed 값 출력
+            Debug.Log($"[PlayerMovement] Speed 설정값: {currentSpeed} | 입력 크기: {move.magnitude:F3}");
+        }
+        else
+        {
+            Debug.LogError("[PlayerMovement] Animator가 NULL입니다! Inspector에서 Animator 컴포넌트를 확인하세요.");
         }
     }
 

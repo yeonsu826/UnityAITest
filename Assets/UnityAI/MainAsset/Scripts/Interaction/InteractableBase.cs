@@ -18,7 +18,7 @@ namespace UnityAI.Interaction
         [SerializeField] protected float soundVolume = 0.5f;
         
         [Header("UI")]
-        [SerializeField] protected NPCUIManager uiManager;
+        [SerializeField] protected UIManager uiManager;
         [SerializeField] protected bool showInteractionHint = true;
         
         [Header("디버그")]
@@ -70,10 +70,10 @@ namespace UnityAI.Interaction
         {
             if (uiManager == null)
             {
-                uiManager = FindFirstObjectByType<NPCUIManager>();
+                uiManager = UIManager.Instance;
                 if (uiManager == null && showDebugLogs)
                 {
-                    Debug.LogWarning($"[Interactable] {gameObject.name}: NPCUIManager를 찾을 수 없습니다.");
+                    Debug.LogWarning($"[Interactable] {gameObject.name}: UIManager를 찾을 수 없습니다.");
                 }
             }
         }
